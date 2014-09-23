@@ -47,8 +47,8 @@ public class Database {
             synchronized (mutex) {
                 if (appDatasource == null) {
                     AppProperties configProvider = new AppProperties();
-//                    configProvider.loadFromFile("D:\\Acom\\ServerConfig.txt");
-                    configProvider.loadFromFile(configPath + "ServerConfig.txt");
+                    configProvider.loadFromFile("/home/hungdt/Desktop/Acom/SourceCode/conf/ServerConfig.txt");
+//                    configProvider.loadFromFile(configPath + "ServerConfig.txt");
                     System.out.println(configPath + "ServerConfig.txt");
                     System.setProperty("com.mchange.v2.c3p0.cfg.xml", configProvider.getString("c3p0-config"));
 
